@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gửi email</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		form {
+			max-width: 500px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		}
+		label, input, textarea {
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		label {
+			font-weight: bold;
+		}
+		input, textarea {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+		}
+		textarea {
+			height: 150px;
+		}
+		button {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			border: none;
+			color: #fff;
+			font-size: 16px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+		.error-message {
+			color: red;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Gửi email</h1>
+	<form action="/sendemail" method="post">
+		<label for="to">Đến:</label>
+		<input type="email" id="to" name="to" placeholder="Email người nhận" required>
+		<label for="subject">Chủ đề:</label>
+		<input type="text" id="subject" name="subject" placeholder="Chủ đề email" required>
+		<label for="message">Nội dung:</label>
+		<textarea id="message" name="message" placeholder="Nội dung email" required></textarea>
+		<button type="submit">Gửi</button>
+	</form>
+</body>
+</html>

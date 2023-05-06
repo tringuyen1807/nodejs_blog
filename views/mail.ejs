@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inbox</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Inbox</h1>
+	<ul>
+		<% mails.forEach(function(mail) { %>
+			<li>
+				<a href="/mail-detail/<%= mail._id %>">
+					<strong>From:</strong> <%= mail.from %><br>
+					<strong>Subject:</strong> <%= mail.subject %><br>
+					<strong>Date:</strong> <%= mail.date %>
+				</a>
+			</li>
+		<% }); %>
+	</ul>
+</body>
+</html>

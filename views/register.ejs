@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <h1 class="text-center mb-4">Register</h1>
+        <form action="/register" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+          <p class="text-center">Already had account? <a href="/login">Login now</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
